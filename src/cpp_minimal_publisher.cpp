@@ -35,6 +35,7 @@ class MinimalCppPublisher : public rclcpp::Node // extending the Node class loca
         rclcpp::Publisher<std_msgs::msg::String>::SharedPtr publisher_;
 };
 
+#ifndef TEST_EXCLUDE_MAIN
 int main(int argc, char* argv[])
 {
     rclcpp::init(argc, argv); // initialize ROS 2
@@ -46,3 +47,4 @@ int main(int argc, char* argv[])
 
     return 0;
 }
+#endif
